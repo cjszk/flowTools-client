@@ -1,0 +1,51 @@
+.other-month-day {
+    opacity: .8;
+    // background-image: linear-gradient(to right, rgba($color-grey-dark, .35));
+    color: #999 !important;
+    font-style: italic;
+}
+
+.overdue-task {
+    opacity: .8;
+    background-image: linear-gradient(to right, rgba(red, .2));
+
+    &:hover {
+        backface-visibility: hidden;
+    }
+}
+
+.overdue-tasks {
+    opacity: .8;
+    color: red !important;
+}
+
+.due-tasks {
+    opacity: .8;
+    color: blue !important;
+}
+
+.finished-tasks {
+    opacity: .8;
+    color: green !important;
+}
+
+.current-day-tasks {
+    opacity: .8;
+    font-weight: bold;
+    text-decoration: underline;
+    color: orange !important;
+}
+
+.current-day-finished {
+    opacity: .8;
+    font-weight: bold;
+    text-decoration: underline;
+    color: green !important;
+}
+
+.current-day {
+    opacity: .8;
+    font-weight: bold;
+    text-decoration: underline;
+    color: $color-black !important;
+}

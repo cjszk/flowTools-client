@@ -1,0 +1,21 @@
+@import "variables/colors";
+@import "mixins/mediaqueries";
+@import "mixins/animations";
+@import "mixins/utils";
+@import "global";
+
+@import "components/app";
+@import "components/landing-page";
+@import "components/login";
+@import "components/signup";
+@import "components/nav";
+@import "components/main";
+@import "components/weekly";
+@import "components/tasks";
+@import "components/footer";
+@import "components/notifications";
+@import "components/settings";
+
+@import "components/windows/youtube/youtube";
+@import "components/windows/pomodoro/pomodoro";
+

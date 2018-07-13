@@ -1,0 +1,199 @@
+.main {
+    text-align: center;
+    height: 93vh;
+    
+    @include respond(phone) {
+        height: 85vh;
+    }
+
+    @media (orientation: portrait) {
+        overflow-y: hidden;
+        margin-top: 10rem;
+    }
+
+    &__toggleWeekly {
+        cursor: pointer;
+        font-weight: bold;
+        color: $color-secondary;
+        text-align: left;
+        font-size: 2rem;
+        left: 22.5%;
+        top: 8%;
+        position: absolute;
+
+        @include respond(tab-land) {
+            visibility: hidden;
+        }
+    }
+
+    &__right {
+        width: 80%;
+        display: inline-block;
+
+    }
+
+    &__month {
+        text-align: center;
+        font-size: 4rem;
+        display: inline-block;
+
+        @include respond(tab-port) {
+            font-size: 3rem;
+        }
+        
+    }
+
+    &__previous {
+        position: absolute;
+        top: 7%;
+        left: 45%;
+        font-size: 4rem;
+
+        @include respond(tab-port) {
+            top: 7rem;
+            font-size: 3rem;
+        }
+        
+        @media (max-width: 830px) and (orientation:landscape) {
+            top: 6rem;
+        }
+
+        @include respond(tab-land) {
+            left: 27.5%;
+        }
+
+        @include respond(phone) {
+            left: 15%;
+            font-size: 2.5rem;
+            top: 5.5rem;
+        }
+
+        &__button {
+            width: 70%;
+
+            @media (orientation: portrait) {
+                margin-top: 10rem;
+            }
+        
+            @include respond(phone) {
+                width: 50%;
+            }
+
+            &:hover {
+                cursor: pointer;
+                transition: .2s;
+                transform: scale(1.1)
+            }
+        }
+    }
+
+    &__next {
+        position: absolute;
+        top: 7%;
+        left: 72%;
+        font-size: 4rem;
+        
+        @include respond(tab-land) {
+            left: 68.5%;
+        }
+
+        @include respond(tab-port) {
+            top: 7rem;
+            font-size: 3rem;
+        }
+
+        @media (max-width: 830px) and (orientation:landscape) {
+            top: 6rem;
+        }
+
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+            left: 70%;
+            top: 5.5rem;
+        }
+
+        &__button {
+            width: 70%;
+                        
+            @media (orientation: portrait) {
+                margin-top: 10rem;
+            }
+
+            @include respond(phone) {
+                width: 50%;
+            }
+
+            &:hover {
+                cursor: pointer;
+                transition: .2s;
+                transform: scale(1.1)
+            }
+        }
+    }
+
+    &__calendar {
+
+        @include respond(tab-land) {
+            width: 100vw;
+            transform: translateX(-10%);
+        }
+
+        @include respond(tab-port) {
+            margin-top: 10rem;
+        }
+
+        @include respond(phone) {
+            width: 100vw;
+            transform: translateX(-10%);
+        }
+
+        @media (orientation: landscape) and (max-width: 570px) {
+            transform: translateX(-10%);
+        }
+        @media (orientation: landscape) {
+            margin-top: 1rem;        
+        }
+
+        &__days {
+            font-size: 2.5rem;
+            
+            @include respond(tab-port) {
+                font-size: 1.8rem;
+            }
+    
+            &__day {
+                display: inline-block;
+                width: 13.5%;
+                text-align: center;
+                overflow: hidden;
+            }
+        }
+    
+        &__block {
+            cursor: pointer;
+            width: 13.5%;
+            display: inline-block;
+            padding: 3rem;
+            font-size: 4rem;
+            color: #444;
+            border: 1px solid #ccc;
+
+            @include respond(tab-port) {
+                font-size: 1.35rem;
+                width: 13.2%;
+                padding: 2rem;
+            }
+
+            @include respond(phone) {
+                font-size: 2.5rem;
+                width: 13%;
+                padding: 1.5rem;
+            }
+    
+            &:hover {
+                border: 1px solid black;
+            }
+        }
+    }
+}

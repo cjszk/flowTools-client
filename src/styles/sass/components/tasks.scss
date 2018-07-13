@@ -1,0 +1,107 @@
+.tasks {
+    height: 90vh;
+    background-image: linear-gradient(to bottom left, rgba($color-primary, 0.5), rgba($color-secondary, 0.5));
+
+    @include respond(phone) {
+        height: 95vh;
+    }
+
+    &__day {
+        margin: 0 0 0 5rem;
+        font-size: 5rem;
+    }
+
+    &__exit {
+        position: absolute;
+        top: 10rem;
+        right: 10rem;
+        font-size: 3rem;
+        cursor: pointer;
+        padding: 0rem 1.75rem;
+        border-radius: 2rem;
+        background-color: $color-primary;
+        border: 2px solid $color-secondary;
+
+        @include respond(tab-land) {
+            top: 12%;
+        }
+
+         &:hover {
+             background-color: $color-secondary;
+             border: 2px solid $color-primary;
+             color: $color-third;
+         }
+    }
+
+    &__ul {
+
+        &__li {
+            padding: 2rem;
+            font-size: 2.5rem;
+
+            &__input {
+                cursor: pointer;
+                width: 5rem;
+                height: 5rem;
+                position: absolute;
+                margin-left: 1rem;
+                //visibility: hidden;
+                //transform: scale(0);
+            }
+
+            &__label {
+                visibility: hidden;
+                transform: scale(0);
+
+                display: inline-block;
+                cursor: pointer;
+                
+                height: 3rem;
+                width: 3rem;
+                border: 5px solid $color-primary;
+                border-radius: 50%;
+                position: absolute;
+            
+                font-size: $default-font-size;
+
+                &__check {
+                    //visibility: hidden;
+                    font-size: 5rem;
+                    position: relative;
+                    top: -3rem;
+                    left: -1rem;
+                    color: $color-secondary;
+                }
+            }
+
+            &__text {
+                display: inline-block;
+
+                margin-left: 9rem;
+            }
+
+            &__edit {
+                display: inline-block;
+                font-size: 2.5rem;
+                margin-right: .35rem;
+                
+
+                &__button {
+                    font-size: 2rem;
+                    padding: .5rem .5rem 0 .5rem;
+                }
+            }
+
+            &__delete-button {
+                font-size: 2rem;
+                padding: .5rem .5rem 0 .5rem;
+            }
+        }
+    }
+
+    &__button {
+        margin: 1rem 0 1rem 2rem;
+        padding: 1rem;
+    }
+
+}

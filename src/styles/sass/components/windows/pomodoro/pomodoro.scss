@@ -1,0 +1,92 @@
+.pomodoro {
+    min-width: 15rem;
+    max-width: 15rem;
+    position: fixed;
+    left: 5%;
+    top: 60%;
+    z-index: 20;
+
+    &__handle {
+        cursor: grab;
+        padding: .5rem 2rem;
+        border: 2px solid $color-fourth;
+        background-color: $color-secondary;
+        color: $color-white;
+        z-index: 1;
+
+        &:active {
+            cursor: grabbing;
+        }
+    }
+
+    &__header {
+        margin: 0rem;
+    }
+
+    &__minimize, &__exit {
+        position: relative;
+        cursor: pointer;
+        float: right;
+        width: 2rem;
+        font-size: 2rem;
+        transform: translate(0, -100%);
+        color: $color-white;
+    }
+
+    &__minimize {
+        font-size: 2rem;
+
+        &__checkbox {
+            visibility: hidden;
+            &:checked ~ .pomodoro__main  {
+                visibility: hidden;
+                position: absolute;
+                left: -1000rem;
+            }
+        }
+    }
+
+    &__main {
+        padding: 2rem .5rem .5rem .5rem;
+        border: 1px solid $color-fourth;
+        background-image: linear-gradient(to bottom right, rgba($color-primary, .9), rgba($color-primary, .9));
+        color: $color-black;
+        transform: translate(0, -25%);
+    }
+
+    &__clock {
+        margin: 0rem 0rem 1.5rem 0rem;
+        padding: 0rem 1rem 1rem 1rem;
+        text-align: center;
+        font-size: 4rem;
+        background-color: $color-secondary;
+        color: $color-white;
+        border-radius: 10%;
+
+        &__minutes {
+            display: inline-block;
+        }
+
+        &__seconds {
+            display: inline-block;
+        }
+    }
+
+    &__options {
+        text-align: center;
+
+        &__start {
+            font-size: 2rem;
+            display: inline-block;
+            padding: .2rem 1rem;
+            margin: .5rem 2rem;
+        }
+
+        &__rest {
+            font-size: 2rem;
+            display: inline-block;
+            padding: .2rem 1rem;
+            margin: .5rem 2rem;
+        }
+    }
+}
